@@ -50,6 +50,25 @@ class TestCalculator(unittest.TestCase):
     #     # Test basic function
     #     fill in code
     ##########################
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
+        self.assertEqual(add(-1, 1), 0)
+        self.assertEqual(add(3,6),9)
+    def test_subtract(self):
+        self.assertEqual(sub(5,3),2)
+        self.assertEqual(sub(0,4),-4)
+        self.assertEqual(sub(10,7),3)
+    def test_divide_by_zero(self):
+        with self.assertRaises(ZeroDivisionError):
+            div(0,5)
+    def test_logarithm(self):
+        self.assertEqual(log(10, 100), 2)
+        self.assertEqual(log(2, 8), 3)
+        self.assertEqual(log(4, 16), 2)
+    def test_log_invalid_base(self):
+        with self.assertRaises(ValueError):
+            log(1, 10)
+
 
     def test_multiply(self):
         self.assertEqual(multiply(4, 5), 20)
