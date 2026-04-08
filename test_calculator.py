@@ -76,16 +76,16 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(mul(0, 10), 0)
 
     def test_divide(self):
-        self.assertEqual(div(20, 5), 4)
-        self.assertAlmostEqual(div(7, 2), 3.5)
-        self.assertAlmostEqual(div(1, 4), 0.25)
+        self.assertEqual(div(5, 20), 4)
+        self.assertAlmostEqual(div(2, 7), 3.5)
+        self.assertAlmostEqual(div(4, 1), 0.25)
 
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
-            log(0)
+            log(0,10)
 
         with self.assertRaises(ValueError):
-            log(-10)
+            log(-10,10)
 
     def test_hypotenuse(self):
         self.assertAlmostEqual(hypotenuse(3, 4), 5.0)
