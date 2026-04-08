@@ -71,14 +71,14 @@ class TestCalculator(unittest.TestCase):
 
 
     def test_multiply(self):
-        self.assertEqual(multiply(4, 5), 20)
-        self.assertEqual(multiply(-3, 6), -18)
-        self.assertEqual(multiply(0, 10), 0)
+        self.assertEqual(mul(4, 5), 20)
+        self.assertEqual(mul(-3, 6), -18)
+        self.assertEqual(mul(0, 10), 0)
 
     def test_divide(self):
-        self.assertEqual(divide(20, 5), 4)
-        self.assertAlmostEqual(divide(7, 2), 3.5)
-        self.assertAlmostEqual(divide(1, 4), 0.25)
+        self.assertEqual(div(20, 5), 4)
+        self.assertAlmostEqual(div(7, 2), 3.5)
+        self.assertAlmostEqual(div(1, 4), 0.25)
 
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
@@ -93,9 +93,9 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(hypotenuse(8, 15), 17.0)
 
     def test_sqrt(self):
-        self.assertAlmostEqual(sqrt(25), 5.0)
-        self.assertAlmostEqual(sqrt(2), 1.41421356237, places=5)
-        self.assertAlmostEqual(sqrt(0), 0.0)
+        self.assertAlmostEqual(square_root(25), 5.0)
+        self.assertAlmostEqual(square_root(2), 1.41421356237, places=5)
+        self.assertAlmostEqual(square_root(0), 0.0)
 
 
 # Do not touch this
